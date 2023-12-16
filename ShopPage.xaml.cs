@@ -27,7 +27,7 @@ public partial class ShopPage : ContentPage
         var location = locations?.FirstOrDefault();
         // var myLocation = await Geolocation.GetLocationAsync();
         var myLocation = new Location(46.7731796289, 23.6213886738);
-        var distance = myLocation.CalculateDistance(location, DistanceUnits.Kilometers);
+       /* var distance = myLocation.CalculateDistance(location, DistanceUnits.Kilometers);
         if (distance < 4)
         {
             var request = new NotificationRequest
@@ -40,7 +40,7 @@ public partial class ShopPage : ContentPage
                 }
             };
             LocalNotificationCenter.Current.Show(request);
-        }
+        }*/
         await Map.OpenAsync(location, options);
     }
 }
